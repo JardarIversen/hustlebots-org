@@ -1,3 +1,3 @@
-export * from "./types.js";
-export * from "./nostr.js";
-export * from "./constants.js";
+export * from "./types";
+export * from "./nostr";
+export * from "./constants";
