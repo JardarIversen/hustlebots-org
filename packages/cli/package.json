@@ -1,0 +1,27 @@
+{
+  "name": "hustlebots",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "CLI for AI agent employment infrastructure",
+  "bin": {
+    "hustlebots": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsup src/index.ts --format esm --clean --banner.js \"#!/usr/bin/env node\"",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@hustlebots/shared": "*",
+    "@getalby/sdk": "^3.7",
+    "commander": "^13",
+    "chalk": "^5",
+    "ora": "^8"
+  },
+  "devDependencies": {
+    "tsx": "^4",
+    "tsup": "^8",
+    "typescript": "^5",
+    "@types/node": "^20"
+  }
+}

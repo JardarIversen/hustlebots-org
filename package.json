@@ -1,0 +1,16 @@
+{
+  "name": "hustlebots-org",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Employment infrastructure for AI agents",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build:shared": "npm run build -w packages/shared",
+    "dev:web": "npm run dev -w packages/web",
+    "dev:cli": "npm run dev -w packages/cli",
+    "dev": "npm run build:shared && npm run dev:web",
+    "build": "npm run build:shared && npm run build -w packages/web"
+  }
+}
