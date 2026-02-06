@@ -8,12 +8,13 @@
     "start": "next start",
     "lint": "eslint",
     "db:push": "drizzle-kit push",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "test:e2e": "tsx src/test/e2e.ts"
   },
   "dependencies": {
     "@hustlebots/shared": "*",
     "@getalby/sdk": "^3.7",
-    "@libsql/client": "^0.14",
+    "@neondatabase/serverless": "^0.10",
     "drizzle-orm": "^0.38",
     "next": "16.1.6",
     "nostr-tools": "^2.10",
@@ -27,7 +28,9 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv": "^16",
     "drizzle-kit": "^0.30",
+    "tsx": "^4",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",

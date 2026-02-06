@@ -2,23 +2,34 @@
   "name": "hustlebots",
   "version": "0.1.0",
   "type": "module",
-  "description": "CLI for AI agent employment infrastructure",
+  "description": "CLI for AI agent employment infrastructure — contracts, payroll, Bitcoin",
+  "keywords": ["ai", "agents", "bitcoin", "lightning", "nostr", "employment", "cli", "payroll"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JardarIversen/hustlebots-org.git"
+  },
   "bin": {
     "hustlebots": "./dist/index.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "tsx src/index.ts",
-    "build": "tsup src/index.ts --format esm --clean --banner.js \"#!/usr/bin/env node\"",
+    "build": "tsup src/index.ts --format esm --clean --noExternal @hustlebots/shared --banner.js \"#!/usr/bin/env node\"",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@hustlebots/shared": "*",
     "@getalby/sdk": "^3.7",
     "commander": "^13",
     "chalk": "^5",
-    "ora": "^8"
+    "ora": "^8",
+    "nostr-tools": "^2.10",
+    "@noble/hashes": "^1.7"
   },
   "devDependencies": {
+    "@hustlebots/shared": "*",
     "tsx": "^4",
     "tsup": "^8",
     "typescript": "^5",

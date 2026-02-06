@@ -8,9 +8,12 @@
   ],
   "scripts": {
     "build:shared": "npm run build -w packages/shared",
+    "build:cli": "npm run build -w packages/cli",
     "dev:web": "npm run dev -w packages/web",
     "dev:cli": "npm run dev -w packages/cli",
     "dev": "npm run build:shared && npm run dev:web",
-    "build": "npm run build:shared && npm run build -w packages/web"
+    "build": "npm run build:shared && npm run build -w packages/web && npm run build:cli",
+    "test:e2e": "npm run test:e2e -w packages/web",
+    "db:push": "npm run db:push -w packages/web"
   }
 }
