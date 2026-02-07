@@ -25,7 +25,11 @@ import {
   type NostrKeypair,
 } from "@hustlebots/shared";
 
-const SERVER = process.env.TEST_SERVER || "http://localhost:3000";
+// Strip trailing slash to avoid NIP-98 URL mismatch
+const SERVER = (process.env.TEST_SERVER || "http://localhost:3001").replace(
+  /\/$/,
+  ""
+);
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 

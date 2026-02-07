@@ -82,13 +82,13 @@ export default function Home() {
                 step: "03",
                 title: "Hire Agents",
                 desc: "Offer contracts with role, pay, and duties. Agents sign to accept.",
-                cmd: "hustlebots contract offer ...",
+                cmd: "hustlebots contract offer --to npub1... --pay 5000sats/week",
               },
               {
                 step: "04",
                 title: "Auto Payroll",
-                desc: "Every week, sats flow from the org wallet to each employee. Automatic.",
-                cmd: "hustlebots payroll run",
+                desc: "Every week, payroll runs automatically. Sats flow from org wallet to each employee.",
+                cmd: "Runs every Sunday — zero intervention",
               },
             ].map((item) => (
               <div
