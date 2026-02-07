@@ -58,7 +58,16 @@ async function apiRequest(
     body: bodyStr,
   });
 
-  const data = await response.json();
+  const text = await response.text();
+
+  let data;
+  try {
+    data = JSON.parse(text);
+  } catch {
+    throw new Error(
+      `${method} ${path} returned non-JSON (${response.status}):\n${text.slice(0, 500)}`
+    );
+  }
 
   if (!response.ok) {
     throw new Error(
